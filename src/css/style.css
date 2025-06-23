@@ -1,0 +1,234 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+:root {
+    --bg-color: #0F101A;
+    --primary-card-color: #1A1C29;
+    --secondary-card-color: #25283A;
+    --text-color: #E0E0E0;
+    --primary-accent-color: #C89B3C;
+    --secondary-accent-color: #09A5AF;
+    --border-color: #4A4A5C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--primary-accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-accent-color);
+}
+
+/* --- Header e Navegação --- */
+.navbar {
+    background-color: var(--primary-card-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary-accent-color);
+}
+
+.nav-logo a {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.nav-logo span {
+    color: var(--primary-accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-accent-color);
+    border-bottom-color: var(--primary-accent-color);
+}
+
+.btn-login {
+    background-color: var(--primary-accent-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.btn-login:hover {
+    background-color: #d4a94a;
+    color: #000;
+}
+
+/* --- Títulos e Cabeçalhos de Página --- */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page-header span {
+    color: var(--secondary-accent-color);
+}
+
+/* --- Componente Card --- */
+.card {
+    background-color: var(--primary-card-color);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Layouts com Grid --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* --- Tabelas --- */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--primary-card-color);
+}
+
+.styled-table th, .styled-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.styled-table thead tr {
+    background-color: var(--secondary-card-color);
+    color: #fff;
+    font-weight: 700;
+}
+
+.styled-table tbody tr:hover {
+    background-color: var(--secondary-card-color);
+}
+
+.team-logo-small {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* --- Formulários --- */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--primary-accent-color);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-card-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary-accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0ab0bb;
+}
+
+/* Estilos Específicos */
+.match-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.team-info {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.team-info img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto 10px;
+}
+.vs {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-accent-color);
+}
+.match-time {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
